@@ -1,0 +1,197 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context="com.example.fede.recmascad.DatosDeLaVictima_activity"
+    android:background="#42A5F5"
+    android:weightSum="1">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/scrollView"
+        android:layout_weight="0.94" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="328dp"
+                android:layout_height="wrap_content"
+                android:text="Datos de la victima"
+                android:id="@+id/lbl_datos"
+                android:layout_weight="0.07"
+                android:textSize="35sp" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/cb_sexo"
+                android:entries="@array/a_sexo"
+                android:background="#E3F2FD"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="46sp"
+                android:textAlignment="center"
+                android:singleLine="true"
+                android:layout_weight="0.07"
+                android:spinnerMode="dialog" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/cb_edad"
+                android:entries="@array/a_edad"
+                android:background="#E3F2FD"
+                android:layout_weight="0.07" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/cb_piel"
+                android:entries="@array/a_piel"
+                android:background="#E3F2FD"
+                android:layout_weight="0.07" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/cb_raza"
+                android:entries="@array/a_raza"
+                android:background="#E3F2FD"
+                android:layout_weight="0.07" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#FFA726" />
+
+
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/cb_pelo_tipo"
+                android:entries="@array/a_pelo_tipo"
+                android:background="#E3F2FD"
+                android:layout_weight="0.07" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/cb_pelo_color"
+                android:entries="@array/a_pelo_color"
+                android:background="#E3F2FD"
+                android:layout_weight="0.07" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/cb_ojos"
+                android:entries="@array/a_ojos"
+                android:background="#E3F2FD"
+                android:layout_weight="0.07" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/cb_altura"
+                android:entries="@array/a_altura"
+                android:background="#E3F2FD"
+                android:layout_weight="0.07" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <TextView
+                android:layout_width="328dp"
+                android:layout_height="wrap_content"
+                android:text="Tatuajes"
+                android:id="@+id/lbl_tatuajes"
+                android:layout_weight="0.07"
+                android:textSize="40sp" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/cb_tatuajes"
+                android:entries="@array/a_tatuajes"
+                android:background="#E3F2FD"
+                android:layout_weight="0.07" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/cb_tatuajes_lugar"
+                android:entries="@array/a_tatuajes_lugar"
+                android:background="#E3F2FD"
+                android:layout_weight="0.07" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_weight="0.07">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tomar Foto"
+            android:id="@+id/button"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="47dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Siguiente"
+            android:id="@+id/button2"
+            android:layout_alignTop="@+id/button"
+            android:layout_toEndOf="@+id/button"
+            android:layout_marginStart="36dp" />
+    </RelativeLayout>
+
+
+</LinearLayout>

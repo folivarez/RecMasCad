@@ -1,0 +1,96 @@
+<resources>
+    <string name="app_name">S.A.R</string>
+
+    <!-- Conjunto de Strings para el View GameSpinner -->
+    <string-array name="a_sexo">
+        <item>Sexo</item>
+        <item>Masculino</item>
+        <item>Femenino</item>
+    </string-array>
+
+    <string-array name="a_edad">
+        <item>Edad</item>
+        <item>1 a 10 años</item>
+        <item>11 a 15 años</item>
+        <item>16 a 20 años</item>
+        <item>21 a 30 años</item>
+        <item>31 a 40 años</item>
+        <item>41 a 50 años</item>
+        <item>51 a 60 años</item>
+        <item>61 a 70 años</item>
+        <item>mas de 70 años</item>
+    </string-array>
+
+    <string-array name="a_piel">
+        <item>Piel</item>
+        <item>Blanca</item>
+        <item>Negra</item>
+        <item>Mestiza</item>
+        <item>Rojiza</item>
+        <item>Albino</item>
+        <item>Amarilla</item>
+    </string-array>
+
+    <string-array name="a_raza">
+        <item>Raza</item>
+        <item>Oriental</item>
+        <item>Occidental</item>
+    </string-array>
+
+    <string-array name="a_pelo_tipo">
+        <item>Tipo de Pelo</item>
+        <item>Largo</item>
+        <item>Corto</item>
+        <item>Calvo total</item>
+        <item>Calvo parcial</item>
+        <item>Rastas</item>
+        <item>Rapado</item>
+        <item>Negro</item>
+    </string-array>
+
+    <string-array name="a_pelo_color">
+        <item>Color de Pelo</item>
+        <item>Rubio</item>
+        <item>castaño</item>
+        <item>pelirrojo</item>
+        <item>blanco</item>
+    </string-array>
+
+    <string-array name="a_ojos">
+        <item>Color de Ojos</item>
+        <item>Azules</item>
+        <item>Celestes</item>
+        <item>Castaños</item>
+        <item>Negros</item>
+        <item>Verdes</item>
+    </string-array>
+
+    <string-array name="a_altura">
+        <item>Altura</item>
+        <item>Bajo - hasta 1,60m</item>
+        <item>Medio - de 1,61m a 1,80m</item>
+        <item>Alto - mas de 1,80m</item>
+    </string-array>
+
+    <string-array name="a_tatuajes">
+        <item>Torso</item>
+        <item>Miembros Superiores</item>
+        <item>Miembros Inferiores</item>
+        <item>Cara</item>
+        <item>Cabeza</item>
+    </string-array>
+
+    <string-array name="a_tatuajes_lugar">
+        <item>Zona</item>
+        <item>Frente</item>
+        <item>Espalda</item>
+        <item>Izquierda</item>
+        <item>Derecha</item>
+    </string-array>
+
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_datos_del_operador">DatosDelOperador</string>
+
+    <string name="hello_world">Hello world!</string>
+</resources>
