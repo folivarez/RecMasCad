@@ -48,6 +48,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="10dp" />
 
+            <TextView
+                android:layout_width="328dp"
+                android:layout_height="wrap_content"
+                android:text="Edad"
+                android:id="@+id/lbl_edad"
+                android:layout_weight="0.07"
+                android:textSize="25sp" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
             <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -60,6 +71,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="10dp" />
 
+            <TextView
+                android:layout_width="328dp"
+                android:layout_height="wrap_content"
+                android:text="Piel"
+                android:id="@+id/lbl_piel"
+                android:layout_weight="0.07"
+                android:textSize="25sp" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
             <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -71,6 +93,17 @@
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="328dp"
+                android:layout_height="wrap_content"
+                android:text="Raza"
+                android:id="@+id/lbl_raza"
+                android:layout_weight="0.07"
+                android:textSize="25sp" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
 
             <Spinner
                 android:layout_width="match_parent"
@@ -85,7 +118,16 @@
                 android:layout_height="10dp"
                 android:background="#FFA726" />
 
-
+            <TextView
+                android:layout_width="328dp"
+                android:layout_height="wrap_content"
+                android:text="Pelo"
+                android:id="@+id/lbl_pelo"
+                android:layout_weight="0.07"
+                android:textSize="25sp" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
 
             <Spinner
                 android:layout_width="match_parent"
@@ -111,6 +153,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="10dp" />
 
+            <TextView
+                android:layout_width="328dp"
+                android:layout_height="wrap_content"
+                android:text="Ojos"
+                android:id="@+id/lbl_ojos"
+                android:layout_weight="0.07"
+                android:textSize="25sp" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
             <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -122,6 +175,17 @@
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="328dp"
+                android:layout_height="wrap_content"
+                android:text="Altura"
+                android:id="@+id/lbl_altura"
+                android:layout_weight="0.07"
+                android:textSize="25sp" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
 
             <Spinner
                 android:layout_width="match_parent"
@@ -138,10 +202,44 @@
             <TextView
                 android:layout_width="328dp"
                 android:layout_height="wrap_content"
+                android:text="Cicatrices"
+                android:id="@+id/lbl_cicatrices"
+                android:layout_weight="0.07"
+                android:textSize="25sp" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/cb_cicatrices_zona"
+                android:entries="@array/a_cicatrices_zona"
+                android:background="#E3F2FD"
+                android:layout_weight="0.07" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/cb_cicatrices_lugar"
+                android:entries="@array/a_cicatrices_lugar"
+                android:background="#E3F2FD"
+                android:layout_weight="0.07" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="328dp"
+                android:layout_height="wrap_content"
                 android:text="Tatuajes"
                 android:id="@+id/lbl_tatuajes"
                 android:layout_weight="0.07"
-                android:textSize="40sp" />
+                android:textSize="25sp" />
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="10dp" />
@@ -169,6 +267,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="10dp" />
 
+            <TextView
+                android:layout_width="328dp"
+                android:layout_height="wrap_content"
+                android:text="Dentadura"
+                android:id="@+id/lbl_dentadura"
+                android:layout_weight="0.07"
+                android:textSize="25sp" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
             <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -180,6 +289,17 @@
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="328dp"
+                android:layout_height="wrap_content"
+                android:text="Discapacidad"
+                android:id="@+id/lbl_discapacidad"
+                android:layout_weight="0.07"
+                android:textSize="25sp" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
 
             <Spinner
                 android:layout_width="match_parent"
@@ -204,6 +324,17 @@
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="328dp"
+                android:layout_height="wrap_content"
+                android:text="Indumentaria"
+                android:id="@+id/lbl_indumentaria"
+                android:layout_weight="0.07"
+                android:textSize="25sp" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
 
             <Spinner
                 android:layout_width="match_parent"

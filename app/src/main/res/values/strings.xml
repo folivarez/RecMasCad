@@ -1,15 +1,13 @@
 <resources>
     <string name="app_name">S.A.R</string>
 
-    <!-- Conjunto de Strings para el View GameSpinner -->
+    <!-- Conjunto de Strings  -->
     <string-array name="a_sexo">
-        <item>Sexo</item>
         <item>Masculino</item>
         <item>Femenino</item>
     </string-array>
 
     <string-array name="a_edad">
-        <item>Edad</item>
         <item>1 a 10 años</item>
         <item>11 a 15 años</item>
         <item>16 a 20 años</item>
@@ -22,7 +20,6 @@
     </string-array>
 
     <string-array name="a_piel">
-        <item>Piel</item>
         <item>Blanca</item>
         <item>Negra</item>
         <item>Mestiza</item>
@@ -32,13 +29,11 @@
     </string-array>
 
     <string-array name="a_raza">
-        <item>Raza</item>
         <item>Oriental</item>
         <item>Occidental</item>
     </string-array>
 
     <string-array name="a_pelo_tipo">
-        <item>Tipo de Pelo</item>
         <item>Largo</item>
         <item>Corto</item>
         <item>Calvo total</item>
@@ -49,7 +44,6 @@
     </string-array>
 
     <string-array name="a_pelo_color">
-        <item>Color de Pelo</item>
         <item>Rubio</item>
         <item>castaño</item>
         <item>pelirrojo</item>
@@ -57,7 +51,6 @@
     </string-array>
 
     <string-array name="a_ojos">
-        <item>Color de Ojos</item>
         <item>Azules</item>
         <item>Celestes</item>
         <item>Castaños</item>
@@ -66,14 +59,27 @@
     </string-array>
 
     <string-array name="a_altura">
-        <item>Altura</item>
         <item>Bajo - hasta 1,60m</item>
         <item>Medio - de 1,61m a 1,80m</item>
         <item>Alto - mas de 1,80m</item>
     </string-array>
 
+    <string-array name="a_cicatrices_zona">
+        <item>Torso</item>
+        <item>Miembros Superiores</item>
+        <item>Miembros Inferiores</item>
+        <item>Cara</item>
+        <item>Cabeza</item>
+    </string-array>
+
+    <string-array name="a_cicatrices_lugar">
+        <item>Frente</item>
+        <item>Espalda</item>
+        <item>Izquierda</item>
+        <item>Derecha</item>
+    </string-array>
+
     <string-array name="a_tatuajes_zona">
-        <item>Zona</item>
         <item>Torso</item>
         <item>Miembros Superiores</item>
         <item>Miembros Inferiores</item>
@@ -82,7 +88,6 @@
     </string-array>
 
     <string-array name="a_tatuajes_lugar">
-        <item>Lugar</item>
         <item>Frente</item>
         <item>Espalda</item>
         <item>Izquierda</item>
@@ -96,25 +101,21 @@
     </string-array>
 
     <string-array name="a_discapacidad_zona">
-        <item>Zona</item>
         <item>Miembros Superiores</item>
         <item>Miembros Inferiores</item>
     </string-array>
 
     <string-array name="a_discapacidad_lugar">
-        <item>Lugar</item>
         <item>Izquierda</item>
         <item>Derecha</item>
     </string-array>
 
     <string-array name="a_indumentaria_zona">
-        <item>Zona</item>
         <item>Superior</item>
         <item>Inferior</item>
     </string-array>
 
     <string-array name="a_indumentaria_color">
-        <item>Color</item>
         <item>Rojo</item>
         <item>Verde</item>
     </string-array>
