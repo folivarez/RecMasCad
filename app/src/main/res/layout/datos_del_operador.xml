@@ -99,7 +99,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Siguiente"
-            android:id="@+id/button4"
+            android:id="@+id/btn_siguiente"
             android:layout_centerHorizontal="true" />
     </RelativeLayout>
 

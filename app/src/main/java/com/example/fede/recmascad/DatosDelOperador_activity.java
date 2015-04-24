@@ -1,10 +1,12 @@
 package com.example.fede.recmascad;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-
+import android.widget.Button;
+import android.view.View;
 
 public class DatosDelOperador_activity extends ActionBarActivity {
 
@@ -12,6 +14,32 @@ public class DatosDelOperador_activity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.datos_del_operador);
+
+        //Declaramos las variables de los botones
+        final Button btn_siguiente = (Button)findViewById(R.id.btn_siguiente);
+
+
+        //Listener para el boton de Jugar
+        btn_siguiente.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                //Creamos el Intent
+                Intent inte = new Intent(DatosDelOperador_activity.this, DatosDeLaVictima_activity.class);
+
+              /*  //Creamos la información a pasar entre actividades
+                Bundle b = new Bundle();
+                b.putString("NOMBRE", texto_usuario.getText().toString());
+
+                //Añadimos la información al intent
+                intent.putExtras(b);*/
+
+                //Iniciamos la nueva actividad
+                startActivity(inte);
+
+            }
+        });
+
     }
 
     @Override

@@ -18,11 +18,33 @@ public class DatosDeLaVictima_activity extends ActionBarActivity {
         //ArrayAdapter para conectar el Spinner a nuestros recursos strings.xml
         ArrayAdapter<CharSequence> ad_sexo;
         ArrayAdapter<CharSequence> ad_edad;
+        ArrayAdapter<CharSequence> ad_piel;
+        ArrayAdapter<CharSequence> ad_raza;
+        ArrayAdapter<CharSequence> ad_pelo_tipo;
+        ArrayAdapter<CharSequence> ad_pelo_color;
+        ArrayAdapter<CharSequence> ad_ojos;
+        ArrayAdapter<CharSequence> ad_altura;
+        ArrayAdapter<CharSequence> ad_cicatrices_zona;
+        ArrayAdapter<CharSequence> ad_cicatrices_lugar;
+        ArrayAdapter<CharSequence> ad_tatuajes_zona;
+        ArrayAdapter<CharSequence> ad_dentadura;
+        ArrayAdapter<CharSequence> ad_discapacidad_zona;
+        ArrayAdapter<CharSequence> ad_discapacidad_lugar;
+        ArrayAdapter<CharSequence> ad_indumentaria_superior;
+        ArrayAdapter<CharSequence> ad_indumentaria_inferior;
+
 
 
         //Obtener instancia del GameSpinner
         Spinner sp_sexo = (Spinner) findViewById(R.id.cb_sexo);
         Spinner sp_edad = (Spinner) findViewById(R.id.cb_edad);
+        Spinner sp_piel = (Spinner) findViewById(R.id.cb_piel);
+        Spinner sp_raza = (Spinner) findViewById(R.id.cb_raza);
+        Spinner sp_pelo_tipo = (Spinner) findViewById(R.id.cb_pelo_tipo);
+        Spinner sp_pelo_color = (Spinner) findViewById(R.id.cb_pelo_color);
+        Spinner sp_ojos = (Spinner) findViewById(R.id.cb_ojos);
+        Spinner sp_altura = (Spinner) findViewById(R.id.cb_altura);
+
 
         //Asignas el origen de datos desde los recursos
         ad_sexo = ArrayAdapter.createFromResource(this, R.array.a_sexo, android.R.layout.simple_spinner_item);

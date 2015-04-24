@@ -27,13 +27,13 @@
         </activity>
 
 
-    <!--    <activity
+        <activity
             android:name=".DatosDeLaVictima_activity"
             android:label="Datos de la Victima">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-        </activity> -->
+        </activity>
     </application>
 
 </manifest>
