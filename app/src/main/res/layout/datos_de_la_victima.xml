@@ -35,7 +35,6 @@
                 android:layout_height="50dp"
                 android:id="@+id/cb_sexo"
                 android:entries="@array/a_sexo"
-                android:background="#E3F2FD"
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:textSize="46sp"
@@ -64,7 +63,6 @@
                 android:layout_height="50dp"
                 android:id="@+id/cb_edad"
                 android:entries="@array/a_edad"
-                android:background="#E3F2FD"
                 android:layout_weight="0.07" />
 
             <Space
@@ -87,7 +85,6 @@
                 android:layout_height="50dp"
                 android:id="@+id/cb_piel"
                 android:entries="@array/a_piel"
-                android:background="#E3F2FD"
                 android:layout_weight="0.07" />
 
             <Space
@@ -110,7 +107,6 @@
                 android:layout_height="50dp"
                 android:id="@+id/cb_raza"
                 android:entries="@array/a_raza"
-                android:background="#E3F2FD"
                 android:layout_weight="0.07" />
 
             <Space
@@ -134,7 +130,6 @@
                 android:layout_height="50dp"
                 android:id="@+id/cb_pelo_tipo"
                 android:entries="@array/a_pelo_tipo"
-                android:background="#E3F2FD"
                 android:layout_weight="0.07" />
 
             <Space
@@ -146,7 +141,6 @@
                 android:layout_height="50dp"
                 android:id="@+id/cb_pelo_color"
                 android:entries="@array/a_pelo_color"
-                android:background="#E3F2FD"
                 android:layout_weight="0.07" />
 
             <Space
@@ -169,7 +163,6 @@
                 android:layout_height="50dp"
                 android:id="@+id/cb_ojos"
                 android:entries="@array/a_ojos"
-                android:background="#E3F2FD"
                 android:layout_weight="0.07" />
 
             <Space
@@ -192,7 +185,6 @@
                 android:layout_height="50dp"
                 android:id="@+id/cb_altura"
                 android:entries="@array/a_altura"
-                android:background="#E3F2FD"
                 android:layout_weight="0.07" />
 
             <Space
@@ -215,7 +207,6 @@
                 android:layout_height="50dp"
                 android:id="@+id/cb_cicatrices_zona"
                 android:entries="@array/a_cicatrices_zona"
-                android:background="#E3F2FD"
                 android:layout_weight="0.07" />
             <Space
                 android:layout_width="match_parent"
@@ -226,7 +217,6 @@
                 android:layout_height="50dp"
                 android:id="@+id/cb_cicatrices_lugar"
                 android:entries="@array/a_cicatrices_lugar"
-                android:background="#E3F2FD"
                 android:layout_weight="0.07" />
 
             <Space
@@ -249,7 +239,6 @@
                 android:layout_height="50dp"
                 android:id="@+id/cb_tatuajes_zona"
                 android:entries="@array/a_tatuajes_zona"
-                android:background="#E3F2FD"
                 android:layout_weight="0.07" />
             <Space
                 android:layout_width="match_parent"
@@ -260,7 +249,6 @@
                 android:layout_height="50dp"
                 android:id="@+id/cb_tatuajes_lugar"
                 android:entries="@array/a_tatuajes_lugar"
-                android:background="#E3F2FD"
                 android:layout_weight="0.07" />
 
             <Space
@@ -283,7 +271,6 @@
                 android:layout_height="50dp"
                 android:id="@+id/cb_dentadura"
                 android:entries="@array/a_dentadura"
-                android:background="#E3F2FD"
                 android:layout_weight="0.07" />
 
             <Space
@@ -306,7 +293,6 @@
                 android:layout_height="50dp"
                 android:id="@+id/cb_discapacidad_zona"
                 android:entries="@array/a_discapacidad_zona"
-                android:background="#E3F2FD"
                 android:layout_weight="0.07" />
 
             <Space
@@ -318,7 +304,6 @@
                 android:layout_height="50dp"
                 android:id="@+id/cb_discapacidad_lugar"
                 android:entries="@array/a_discapacidad_lugar"
-                android:background="#E3F2FD"
                 android:layout_weight="0.07" />
 
             <Space
@@ -341,7 +326,6 @@
                 android:layout_height="50dp"
                 android:id="@+id/cb_indumentaria_zona"
                 android:entries="@array/a_indumentaria_zona"
-                android:background="#E3F2FD"
                 android:layout_weight="0.07" />
 
             <Space
@@ -353,7 +337,6 @@
                 android:layout_height="50dp"
                 android:id="@+id/cb_indumentaria_color"
                 android:entries="@array/a_indumentaria_color"
-                android:background="#E3F2FD"
                 android:layout_weight="0.07" />
 
 
@@ -369,7 +352,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tomar Foto"
-            android:id="@+id/button"
+            android:id="@+id/btn_tomar_foto"
             android:layout_centerVertical="true"
             android:layout_alignParentStart="true"
             android:layout_marginStart="47dp" />
@@ -378,10 +361,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Siguiente"
-            android:id="@+id/button2"
-            android:layout_alignTop="@+id/button"
-            android:layout_toEndOf="@+id/button"
-            android:layout_marginStart="36dp" />
+            android:id="@+id/btn_siguiente_enviar"
+            android:layout_alignTop="@+id/btn_tomar_foto"
+            android:layout_toEndOf="@+id/btn_tomar_foto" />
     </RelativeLayout>
 
 

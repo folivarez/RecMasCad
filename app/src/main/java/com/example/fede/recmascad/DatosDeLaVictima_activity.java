@@ -1,5 +1,6 @@
 package com.example.fede.recmascad;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -7,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -133,6 +135,8 @@ public class DatosDeLaVictima_activity extends ActionBarActivity {
         sp_idumentaria_zona.setAdapter(ad_indumentaria_zona);
         sp_indumentaria_color.setAdapter(ad_indumentaria_color);
 
+        //sp_altura.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
         sp_altura.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -145,6 +149,33 @@ public class DatosDeLaVictima_activity extends ActionBarActivity {
 
             }
         });
+
+
+        //Declaramos las variables de los botones
+        final Button btn_siguiente = (Button)findViewById(R.id.btn_siguiente_enviar);
+
+
+        //Listener para el boton de Jugar
+        btn_siguiente.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                //Creamos el Intent
+                Intent inte = new Intent(DatosDeLaVictima_activity.this, DatosAEnviar_activity.class);
+
+              /*  //Creamos la información a pasar entre actividades
+                Bundle b = new Bundle();
+                b.putString("NOMBRE", texto_usuario.getText().toString());
+
+                //Añadimos la información al intent
+                intent.putExtras(b);*/
+
+                //Iniciamos la nueva actividad
+                startActivity(inte);
+
+            }
+        });
+
     }
 
     @Override

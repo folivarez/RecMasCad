@@ -124,6 +124,7 @@
 
     <string name="action_settings">Settings</string>
     <string name="title_activity_datos_del_operador">DatosDelOperador</string>
+    <string name="title_activity_enviar_datos">enviarDatos</string>
 
-    <string name="hello_world">Hello world!</string>
+
 </resources>
