@@ -12,59 +12,84 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+
 
 public class DatosDeLaVictima_activity extends ActionBarActivity {
 
+    public String s_altura;
+    public String s_edad;
+    public String s_sexo;
+    public String s_piel;
+    public String s_raza;
+
+    public String s_peloTipo;
+    public String s_peloColor;
+    public String s_ojos;
+
+    public String s_cicatricesZona;
+    public String s_cicatricesLugar;
+    public String s_tatuajesZona;
+    public String s_tatuajesLugar;
+
+    public String s_dentadura;
+    public String s_discapacidadZona;
+    public String s_discapacidadLugar;
+    public String s_indumentariaZona;
+    public String s_indumentariaColor;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.datos_de_la_victima);
 
         //ArrayAdapter para conectar el Spinner a nuestros recursos strings.xml
-        ArrayAdapter<CharSequence> ad_sexo;
-        ArrayAdapter<CharSequence> ad_edad;
-        ArrayAdapter<CharSequence> ad_piel;
-        ArrayAdapter<CharSequence> ad_raza;
+        final ArrayAdapter<CharSequence> ad_sexo;
+        final ArrayAdapter<CharSequence> ad_edad;
+        final ArrayAdapter<CharSequence> ad_piel;
+        final ArrayAdapter<CharSequence> ad_raza;
 
-        ArrayAdapter<CharSequence> ad_pelo_tipo;
-        ArrayAdapter<CharSequence> ad_pelo_color;
-        ArrayAdapter<CharSequence> ad_ojos;
-        ArrayAdapter<CharSequence> ad_altura;
+        final ArrayAdapter<CharSequence> ad_pelo_tipo;
+        final ArrayAdapter<CharSequence> ad_pelo_color;
+        final ArrayAdapter<CharSequence> ad_ojos;
+        final ArrayAdapter<CharSequence> ad_altura;
 
-        ArrayAdapter<CharSequence> ad_cicatrices_zona;
-        ArrayAdapter<CharSequence> ad_cicatrices_lugar;
-        ArrayAdapter<CharSequence> ad_tatuajes_zona;
-        ArrayAdapter<CharSequence> ad_tatuajes_lugar;
+        final ArrayAdapter<CharSequence> ad_cicatrices_zona;
+        final ArrayAdapter<CharSequence> ad_cicatrices_lugar;
+        final ArrayAdapter<CharSequence> ad_tatuajes_zona;
+        final ArrayAdapter<CharSequence> ad_tatuajes_lugar;
 
-        ArrayAdapter<CharSequence> ad_dentadura;
-        ArrayAdapter<CharSequence> ad_discapacidad_zona;
-        ArrayAdapter<CharSequence> ad_discapacidad_lugar;
-        ArrayAdapter<CharSequence> ad_indumentaria_zona;
-        ArrayAdapter<CharSequence> ad_indumentaria_color;
+        final ArrayAdapter<CharSequence> ad_dentadura;
+        final ArrayAdapter<CharSequence> ad_discapacidad_zona;
+        final ArrayAdapter<CharSequence> ad_discapacidad_lugar;
+        final ArrayAdapter<CharSequence> ad_indumentaria_zona;
+        final ArrayAdapter<CharSequence> ad_indumentaria_color;
 
 
 
         //Obtener instancia del GameSpinner
-        Spinner sp_sexo = (Spinner) findViewById(R.id.cb_sexo);
-        Spinner sp_edad = (Spinner) findViewById(R.id.cb_edad);
-        Spinner sp_piel = (Spinner) findViewById(R.id.cb_piel);
-        Spinner sp_raza = (Spinner) findViewById(R.id.cb_raza);
+        final Spinner sp_sexo = (Spinner) findViewById(R.id.cb_sexo);
+        final Spinner sp_edad = (Spinner) findViewById(R.id.cb_edad);
+        final Spinner sp_piel = (Spinner) findViewById(R.id.cb_piel);
+        final Spinner sp_raza = (Spinner) findViewById(R.id.cb_raza);
 
-        Spinner sp_pelo_tipo = (Spinner) findViewById(R.id.cb_pelo_tipo);
-        Spinner sp_pelo_color = (Spinner) findViewById(R.id.cb_pelo_color);
-        Spinner sp_ojos = (Spinner) findViewById(R.id.cb_ojos);
-        Spinner sp_altura = (Spinner) findViewById(R.id.cb_altura);
+        final Spinner sp_pelo_tipo = (Spinner) findViewById(R.id.cb_pelo_tipo);
+        final Spinner sp_pelo_color = (Spinner) findViewById(R.id.cb_pelo_color);
+        final Spinner sp_ojos = (Spinner) findViewById(R.id.cb_ojos);
+        final Spinner sp_altura = (Spinner) findViewById(R.id.cb_altura);
 
-        Spinner sp_cicatrices_zona = (Spinner) findViewById(R.id.cb_cicatrices_zona);
-        Spinner sp_cicatrices_lugar = (Spinner) findViewById(R.id.cb_cicatrices_lugar);
-        Spinner sp_tatuajes_zona = (Spinner) findViewById(R.id.cb_tatuajes_zona);
-        Spinner sp_tatuajes_lugar = (Spinner) findViewById(R.id.cb_tatuajes_lugar);
+        final Spinner sp_cicatrices_zona = (Spinner) findViewById(R.id.cb_cicatrices_zona);
+        final Spinner sp_cicatrices_lugar = (Spinner) findViewById(R.id.cb_cicatrices_lugar);
+        final Spinner sp_tatuajes_zona = (Spinner) findViewById(R.id.cb_tatuajes_zona);
+        final Spinner sp_tatuajes_lugar = (Spinner) findViewById(R.id.cb_tatuajes_lugar);
 
-        Spinner sp_dentadura = (Spinner) findViewById(R.id.cb_dentadura);
-        Spinner sp_discapacidad_zona = (Spinner) findViewById(R.id.cb_discapacidad_zona);
-        Spinner sp_discapacidad_lugar = (Spinner) findViewById(R.id.cb_discapacidad_lugar);
-        Spinner sp_idumentaria_zona = (Spinner) findViewById(R.id.cb_indumentaria_zona);
-        Spinner sp_indumentaria_color = (Spinner) findViewById(R.id.cb_indumentaria_color);
+        final Spinner sp_dentadura = (Spinner) findViewById(R.id.cb_dentadura);
+        final Spinner sp_discapacidad_zona = (Spinner) findViewById(R.id.cb_discapacidad_zona);
+        final Spinner sp_discapacidad_lugar = (Spinner) findViewById(R.id.cb_discapacidad_lugar);
+        final Spinner sp_indumentaria_zona = (Spinner) findViewById(R.id.cb_indumentaria_zona);
+        final Spinner sp_indumentaria_color = (Spinner) findViewById(R.id.cb_indumentaria_color);
 
 
 
@@ -132,21 +157,128 @@ public class DatosDeLaVictima_activity extends ActionBarActivity {
         sp_dentadura.setAdapter(ad_dentadura);
         sp_discapacidad_zona.setAdapter(ad_discapacidad_zona);
         sp_discapacidad_lugar.setAdapter(ad_discapacidad_lugar);
-        sp_idumentaria_zona.setAdapter(ad_indumentaria_zona);
+        sp_indumentaria_zona.setAdapter(ad_indumentaria_zona);
         sp_indumentaria_color.setAdapter(ad_indumentaria_color);
 
-        //sp_altura.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-
-        sp_altura.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
+        sp_edad.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(parent.getContext(),"Selecciono " + parent.getItemAtPosition(position).toString(), Toast.LENGTH_LONG).show();
-
+                s_edad = sp_edad.getItemAtPosition(position).toString();
             }
 
-            @Override
             public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+        sp_sexo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                s_sexo = sp_sexo.getItemAtPosition(position).toString();
+            }
 
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+        sp_altura.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                 s_altura = sp_altura.getItemAtPosition(position).toString();
+            }
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+        sp_raza.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                s_raza = sp_raza.getItemAtPosition(position).toString();
+            }
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+        sp_piel.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                s_piel = sp_piel.getItemAtPosition(position).toString();
+            }
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+        sp_ojos.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                s_ojos = sp_ojos.getItemAtPosition(position).toString();
+            }
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+        sp_cicatrices_zona.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                s_cicatricesZona = sp_cicatrices_zona.getItemAtPosition(position).toString();
+            }
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+        sp_cicatrices_lugar.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                s_cicatricesLugar = sp_cicatrices_lugar.getItemAtPosition(position).toString();
+            }
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+        sp_tatuajes_zona.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                s_tatuajesZona = sp_tatuajes_zona.getItemAtPosition(position).toString();
+            }
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+        sp_tatuajes_lugar.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                s_tatuajesLugar = sp_tatuajes_lugar.getItemAtPosition(position).toString();
+            }
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+        sp_indumentaria_color.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                s_indumentariaColor = sp_indumentaria_color.getItemAtPosition(position).toString();
+            }
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+        sp_indumentaria_zona.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                s_indumentariaZona = sp_indumentaria_zona.getItemAtPosition(position).toString();
+            }
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+        sp_dentadura.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                s_dentadura = sp_dentadura.getItemAtPosition(position).toString();
+            }
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+        sp_discapacidad_lugar.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                s_discapacidadLugar = sp_discapacidad_lugar.getItemAtPosition(position).toString();
+            }
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+        sp_discapacidad_zona.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                s_discapacidadZona = sp_discapacidad_zona.getItemAtPosition(position).toString();
+            }
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+        sp_pelo_tipo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                s_peloTipo = sp_pelo_tipo.getItemAtPosition(position).toString();
+            }
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+        sp_pelo_color.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                s_peloColor = sp_pelo_color.getItemAtPosition(position).toString();
+            }
+            public void onNothingSelected(AdapterView<?> parent) {
             }
         });
 
@@ -154,21 +286,42 @@ public class DatosDeLaVictima_activity extends ActionBarActivity {
         //Declaramos las variables de los botones
         final Button btn_siguiente = (Button)findViewById(R.id.btn_siguiente_enviar);
 
-
-        //Listener para el boton de Jugar
+        //Listener para el boton de siguiente
         btn_siguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+
+                ArrayList<String> aDatosVictima =  new ArrayList<String>();
+                aDatosVictima.add(s_altura);            //1
+                aDatosVictima.add(s_edad);              //2
+                aDatosVictima.add(s_sexo);              //3
+                aDatosVictima.add(s_piel);                  //4
+                aDatosVictima.add(s_raza);              //5
+                aDatosVictima.add(s_peloTipo);              //6
+                aDatosVictima.add(s_peloColor);             //7
+                aDatosVictima.add(s_ojos);                  //8
+                aDatosVictima.add(s_cicatricesZona);            //9
+                aDatosVictima.add(s_cicatricesLugar);           //10
+                aDatosVictima.add(s_tatuajesZona);              //11
+                aDatosVictima.add(s_tatuajesLugar);             //12
+                aDatosVictima.add(s_dentadura);                 //13
+                aDatosVictima.add(s_discapacidadZona);              //14
+                aDatosVictima.add(s_discapacidadLugar);             //15
+                aDatosVictima.add(s_indumentariaZona);              //16
+                aDatosVictima.add(s_indumentariaColor);             //17
+
+
+
                 //Creamos el Intent
                 Intent inte = new Intent(DatosDeLaVictima_activity.this, DatosAEnviar_activity.class);
 
-              /*  //Creamos la información a pasar entre actividades
-                Bundle b = new Bundle();
-                b.putString("NOMBRE", texto_usuario.getText().toString());
+                //Creamos la información a pasar entre actividades
+                /*Bundle b = new Bundle();
+                b.putString("datosVictima ", json);*/
 
                 //Añadimos la información al intent
-                intent.putExtras(b);*/
+                inte.putExtra("aVictima", aDatosVictima);
 
                 //Iniciamos la nueva actividad
                 startActivity(inte);

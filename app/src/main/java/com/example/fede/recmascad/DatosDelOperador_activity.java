@@ -1,12 +1,15 @@
 package com.example.fede.recmascad;
 
+import android.annotation.TargetApi;
 import android.content.Intent;
+import android.os.Build;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.view.View;
+import android.widget.Toolbar;
 
 public class DatosDelOperador_activity extends ActionBarActivity {
 
@@ -41,6 +44,9 @@ public class DatosDelOperador_activity extends ActionBarActivity {
         });
 
     }
+
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
