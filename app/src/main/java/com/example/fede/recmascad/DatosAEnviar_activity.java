@@ -1,5 +1,6 @@
 package com.example.fede.recmascad;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v7.app.ActionBarActivity;
@@ -56,83 +57,63 @@ public class DatosAEnviar_activity extends ActionBarActivity {
 
 
 
-           runThread();
+            ExecuteTask lp = new ExecuteTask();
+            lp.execute();
 
 
         }};
 
-    private void runThread() {
-
-        new Thread() {
-            int i = 0;
-            public void run() {
-                while (i++ < 1000) try {
-                    runOnUiThread(new Runnable() {
-
-                        @Override
-                        public void run() {
-                            Socket socket = null;
-                            DataOutputStream dataOutputStream = null;
-                            ObjectOutputStream objectOutputStream = null;
-                            DataInputStream dataInputStream = null;
-
-                            try {
-                                socket = new Socket("192.168.1.36", 6004);
-                                //dataOutputStream = new DataOutputStream(socket.getOutputStream());
-                                objectOutputStream = new ObjectOutputStream(socket.getOutputStream());
-                                dataInputStream = new DataInputStream(socket.getInputStream());
-                                //dataOutputStream.writeUTF(textOut.getText().toString());
-                                //dataOutputStream.writeUTF(String.valueOf(aVictima));
-                                //dataOutputStream.writeUTF(String.valueOf(aVictima));
-                                objectOutputStream.writeObject(aVictima);
 
 
-                                textIn.setText(dataInputStream.readUTF());
-                            } catch (UnknownHostException e) {
-                                // TODO Auto-generated catch block
-                                e.printStackTrace();
-                            } catch (IOException e) {
-                                // TODO Auto-generated catch block
-                                e.printStackTrace();
-                            } finally {
-                                if (socket != null) {
-                                    try {
-                                        socket.close();
-                                    } catch (IOException e) {
-                                        // TODO Auto-generated catch block
-                                        e.printStackTrace();
-                                    }
-                                }
 
-                                if (dataOutputStream != null) {
-                                    try {
-                                        dataOutputStream.close();
-                                    } catch (IOException e) {
-                                        // TODO Auto-generated catch block
-                                        e.printStackTrace();
-                                    }
-                                }
 
-                                if (dataInputStream != null) {
-                                    try {
-                                        dataInputStream.close();
-                                    } catch (IOException e) {
-                                        // TODO Auto-generated catch block
-                                        e.printStackTrace();
-                                    }
-                                }
-                            }
+        class ExecuteTask extends AsyncTask<String, String, String> {
+            @Override
+            protected void onPreExecute(){
+                super.onPreExecute();
 
-                        }
-
-                    });
-                    Thread.sleep(300);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
             }
-        }.start();
-    }
+
+            protected String doInBackground(String ... args){
+
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(String file_url){
+
+                runOnUiThread(new Runnable() {
+                    Socket socket = null;
+                    DataOutputStream dataOutputStream = null;
+                    ObjectOutputStream objectOutputStream = null;
+                    DataInputStream dataInputStream = null;
+                    public void run(){
+                        try {
+                            socket = new Socket("192.168.1.36", 6004);
+                            //dataOutputStream = new DataOutputStream(socket.getOutputStream());
+                            objectOutputStream = new ObjectOutputStream(socket.getOutputStream());
+                            dataInputStream = new DataInputStream(socket.getInputStream());
+                            //dataOutputStream.writeUTF(textOut.getText().toString());
+                            //dataOutputStream.writeUTF(String.valueOf(aVictima));
+                            //dataOutputStream.writeUTF(String.valueOf(aVictima));
+                            objectOutputStream.writeObject(aVictima);
+
+                            textIn.setText(dataInputStream.readUTF());
+
+                            socket.close();
+                        } catch (UnknownHostException e) {
+                            // TODO Auto-generated catch block
+                            e.printStackTrace();
+                        } catch (IOException e) {
+                            // TODO Auto-generated catch block
+                            e.printStackTrace();
+                        }
+                    }
+                });
+            }
+        }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
