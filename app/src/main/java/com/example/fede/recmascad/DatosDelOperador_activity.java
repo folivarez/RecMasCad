@@ -22,7 +22,7 @@ public class DatosDelOperador_activity extends ActionBarActivity {
         final Button btn_siguiente = (Button)findViewById(R.id.btn_siguiente);
 
 
-        //Listener para el boton de Jugar
+        //Listener para el boton
         btn_siguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
