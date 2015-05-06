@@ -90,7 +90,7 @@ public class DatosAEnviar_activity extends ActionBarActivity {
                     DataInputStream dataInputStream = null;
                     public void run(){
                         try {
-                            socket = new Socket("192.168.1.36", 6004);
+                            socket = new Socket("104.236.125.167", 6004);
                             //dataOutputStream = new DataOutputStream(socket.getOutputStream());
                             objectOutputStream = new ObjectOutputStream(socket.getOutputStream());
                             dataInputStream = new DataInputStream(socket.getInputStream());
