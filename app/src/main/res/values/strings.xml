@@ -126,5 +126,8 @@
     <string name="title_activity_datos_del_operador">DatosDelOperador</string>
     <string name="title_activity_enviar_datos">enviarDatos</string>
 
+    <string name="msg_error">Error</string>
+    <string name="msg_success">Envío de datos éxitoso</string>
+
 
 </resources>

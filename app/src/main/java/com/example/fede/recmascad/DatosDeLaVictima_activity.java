@@ -1,6 +1,9 @@
 package com.example.fede.recmascad;
 
 import android.content.Intent;
+import android.net.Uri;
+import android.os.Environment;
+import android.provider.MediaStore;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -14,6 +17,8 @@ import android.widget.Toast;
 
 import org.json.JSONObject;
 
+import java.io.File;
+import java.net.URI;
 import java.util.ArrayList;
 
 
@@ -39,6 +44,11 @@ public class DatosDeLaVictima_activity extends ActionBarActivity {
     public String s_discapacidadLugar;
     public String s_indumentariaZona;
     public String s_indumentariaColor;
+
+    Button btnCamara;
+    private String foto;
+    private static int TAKE_PICTURE = 1;
+    double aleatorio = 0;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -293,23 +303,24 @@ public class DatosDeLaVictima_activity extends ActionBarActivity {
 
 
                 ArrayList<String> aDatosVictima =  new ArrayList<String>();
-                aDatosVictima.add(s_altura);            //1
-                aDatosVictima.add(s_edad);              //2
-                aDatosVictima.add(s_sexo);              //3
-                aDatosVictima.add(s_piel);                  //4
-                aDatosVictima.add(s_raza);              //5
-                aDatosVictima.add(s_peloTipo);              //6
-                aDatosVictima.add(s_peloColor);             //7
-                aDatosVictima.add(s_ojos);                  //8
-                aDatosVictima.add(s_cicatricesZona);            //9
-                aDatosVictima.add(s_cicatricesLugar);           //10
-                aDatosVictima.add(s_tatuajesZona);              //11
-                aDatosVictima.add(s_tatuajesLugar);             //12
-                aDatosVictima.add(s_dentadura);                 //13
-                aDatosVictima.add(s_discapacidadZona);              //14
-                aDatosVictima.add(s_discapacidadLugar);             //15
-                aDatosVictima.add(s_indumentariaZona);              //16
-                aDatosVictima.add(s_indumentariaColor);             //17
+                aDatosVictima.add(s_altura);            //0
+                aDatosVictima.add(s_edad);              //1
+                aDatosVictima.add(s_sexo);              //2
+                aDatosVictima.add(s_piel);                  //3
+                aDatosVictima.add(s_raza);              //4
+                aDatosVictima.add(s_peloTipo);              //5
+                aDatosVictima.add(s_peloColor);             //6
+                aDatosVictima.add(s_ojos);                  //7
+                aDatosVictima.add(s_cicatricesZona);            //8
+                aDatosVictima.add(s_cicatricesLugar);           //9
+                aDatosVictima.add(s_tatuajesZona);              //10
+                aDatosVictima.add(s_tatuajesLugar);             //11
+                aDatosVictima.add(s_dentadura);                 //12
+                aDatosVictima.add(s_discapacidadZona);              //13
+                aDatosVictima.add(s_discapacidadLugar);             //14
+                aDatosVictima.add(s_indumentariaZona);              //15
+                aDatosVictima.add(s_indumentariaColor);             //16
+                aDatosVictima.add(foto);             //16
 
 
 
@@ -326,6 +337,23 @@ public class DatosDeLaVictima_activity extends ActionBarActivity {
                 //Iniciamos la nueva actividad
                 startActivity(inte);
 
+            }
+        });
+
+        //Sacar Foto
+        aleatorio = new Double(Math.random() * 100).intValue();
+        foto = Environment.getExternalStorageDirectory() + "/imagen"+ aleatorio +".jpg";
+
+        btnCamara = (Button) findViewById(R.id.btn_tomar_foto);
+        btnCamara.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                Uri output = Uri.fromFile(new File(foto));
+                intent.putExtra(MediaStore.EXTRA_OUTPUT, output);
+                //startActivityForResult(intent, TAKE_PICTURE); // 1 para la camara, 2 para la galeria
+                startActivityForResult(intent, TAKE_PICTURE); // 1 para la camara, 2 para la galeria
             }
         });
 
@@ -353,3 +381,4 @@ public class DatosDeLaVictima_activity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 }
+
